@@ -99,7 +99,7 @@ class WifiListAdapter : RecyclerView.Adapter<WifiListAdapter.WifiViewHolder>() {
             // Nota: esta é uma aproximação; a precisão varia com o ambiente
             val freqInMhz = frequency / 1000.0
             val exp = (27.55 - (20 * Math.log10(freqInMhz)) + abs(signalLevel)) / 20.0
-            return Math.pow(1.0, exp)
+            return Math.pow(10.0, exp)
         }
 
         private fun getSecurityType(capabilities: String): String {

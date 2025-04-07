@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/black"
+    android:background="@color/fundo"
     tools:context=".ui.wifi.WifiAnalyzerFragment">
 
     <!-- Navegação por Tabs -->
@@ -14,7 +14,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primaryColor"
+        android:background="@color/starInactive"
         app:tabMode="fixed">
 
         <com.google.android.material.tabs.TabItem
@@ -54,7 +54,7 @@
             android:id="@+id/chartWifi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone" />
+            android:visibility="invisible" />
     </FrameLayout>
 
     <!-- Botões de Frequência -->

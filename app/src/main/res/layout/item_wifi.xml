@@ -115,29 +115,27 @@
             android:id="@+id/detailsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#B0B0B0"
             android:orientation="vertical"
             android:padding="8dp"
-            android:background="#F5F5F5"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <!-- Add detailed information here -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Largura de banda: 20MHz"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textColor="#FF000000" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="BSSID: 00:11:22:33:44:55"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textColor="#FF000000" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vendor: ASUSTEK COMP"
-                android:textSize="12sp" />
+
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
