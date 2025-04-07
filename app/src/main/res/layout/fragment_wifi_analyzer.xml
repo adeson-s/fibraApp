@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    tools:context=".ui.wifi.WifiAnalyzerFragment">
+
+    <!-- Navegação por Tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Access Points" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channel Rating" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channel Graph" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Graph" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Conteúdo principal (RecyclerView e gráfico sobrepostos, alternando visibilidade) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewWifi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartWifi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Botões de Frequência -->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButtonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!-- Adicione os botões de alternância aqui -->
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <!-- Botões 24 GHz e 5 GHz -->
+    <Button
+        android:id="@+id/btn24GHz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24 GHz"/>
+
+    <Button
+        android:id="@+id/btn5GHz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 GHz"/>
+
+    <!-- Texto dos Melhores Canais -->
+    <TextView
+        android:id="@+id/tvBestChannels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Melhores Canais"/>
+
+</LinearLayout>
